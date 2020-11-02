@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <p>{{$store.state.count}}</p>
+    <button @click="$store.commit('add')">click</button>
+    <p @click="$store.dispatch('add')">{{$store.state.count}}</p>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
